@@ -35,10 +35,13 @@ body {
 }
 
 .desc {
-  padding: 32px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.detail {
+  padding: 32px 40px 0px 40px;
 }
 
 h3 {
@@ -58,6 +61,7 @@ p {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  padding: 0 40px 40px 40px;
 }
 
 .profile {
@@ -164,9 +168,38 @@ p {
   color: hsl(228, 45%, 44%);
 }
 
+/* footer toogle */
+.footer-toogle {
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  background-color: hsl(217, 19%, 35%);
+  height: 75px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.social span {
+  color: hsl(212, 23%, 69%);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 13px;
+  margin-right: 21px;
+}
+
+.social a {
+  margin: 0 8px;
+}
+
+.social img {
+  width: 20px;
+  height: 20px;
+}
+
 /* Responsive styles */
 @media (max-width: 767px) {
   .card {
+    max-width: 375px;
     width: 90%;
     height: auto;
     flex-direction: column;
@@ -178,11 +211,19 @@ p {
     border-radius: 10px 10px 0 0;
   }
 
-  .desc {
+  .detail {
     padding: 20px;
   }
 
   .footer {
-    margin-top: 40px;
+    display: flex;
+  }
+
+  .share-options {
+    display: none;
+  }
+
+  .footer-toogle {
+    display: none;
   }
 }
